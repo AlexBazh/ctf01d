@@ -25,10 +25,10 @@ jobs:
         run: npm run build
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/${{ github.repository_owner }}/ctf01d-front:latest .
+        run: docker build -t ghcr.io/alexbazh/ctf01d-front:latest .
 
       - name: Log in to GitHub Container Registry
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
 
       - name: Push Docker image to GitHub Container Registry
-        run: docker push ghcr.io/${{ github.repository_owner }}/ctf01d-front:latest
+        run: docker push ghcr.io/alexbazh/ctf01d-front:latest
