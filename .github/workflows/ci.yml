@@ -3,7 +3,7 @@ name: Build and Publish Docker Image
 on:
   push:
     branches:
-      - main  # запускать при пуше в ветку main
+      - master  # запускать при пуше в ветку main
 
 jobs:
   build:
